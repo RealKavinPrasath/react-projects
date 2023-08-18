@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.card--container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: #F5F5F5;
+  color: #2B283A;
+  margin-top: 1rem;
+  padding: 1rem;
+  height: 208px;
+  width: 550px;
+}
+
+h2, h4 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0.4rem;
+  font-size: 25px;
+}
+
+h4 {
+  margin-bottom: 0.7rem; 
+}
+
+.card--container > img {
+  height: 150px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.card--container p, a {
+  font-size: 11px;
+  margin: 0;
+}
+
+.card--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 168px;
+  padding: 1rem;
+}
+
+.card--info-upper > div {
+  display: flex;
+}
+
+.card--info-upper p{
+  margin-right: auto;
+  margin-left: 0.5rem;
+  letter-spacing: 1.5px;
+}
+
+.card--info-upper img {
+  height: 9.5px;
+}
+
+
+
