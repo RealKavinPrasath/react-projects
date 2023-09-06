@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.Header {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Outfit';
+  font-size: 450px;
+  margin: 0;
+}
+
+.Header > img {
+  height: 57px;
+}
+
+.Footer {
+  display: flex;
+  height: 143px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  width: 90px;
+  justify-content: space-evenly;
+}
+
+.navigation > img {
+  height: 35px;
+}
