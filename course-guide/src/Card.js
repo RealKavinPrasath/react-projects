@@ -3,7 +3,9 @@ import React from "react"
 export default function Card(props) {
     return (
       <div className="card--container">
-          <img src={props.imageUrl} alt="course thumbnail"/>
+          <div className="image--container">
+            <img src={props.imageUrl} alt="course thumbnail"/>
+          </div>
           <div className="card--info">
             <div className="card--info-upper">
               <div>

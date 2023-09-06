@@ -1,6 +1,7 @@
 import React from 'react'
 import data from './data' 
 import Card from './Card'
+import NavBar from './Navbar'
 
 export default function App() {
   const cards = data.map(item => {
@@ -12,8 +13,11 @@ export default function App() {
     )
   })
   return (
-    <div>
-      {cards}
+    <div className='page--container'>  
+      <NavBar/>
+      <section>
+        {cards}
+      </section>
     </div>
   );
 }
