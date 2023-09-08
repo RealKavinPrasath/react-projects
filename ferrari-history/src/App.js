@@ -9,16 +9,9 @@ function App() {
   const [trackData, setTrackData] = React.useState(data)
   const [track, setTrack] = React.useState(trackData[0])
   
-  function nextTrack() {
+  function handleTransition(name) {
     setTrack(previousTrack => {
-      const id = previousTrack.id + 1
-      return (trackData[id])
-    })
-  }
-
-  function prevTrack() {
-    setTrack(previousTrack => {
-      const id = previousTrack.id ? previousTrack.id - 1 : previousTrack.id 
+      const id = name === "right" ? previousTrack.id + 1 : previousTrack.id ? previousTrack.id - 1 : previousTrack.id 
       return (trackData[id])
     })
   }
@@ -27,7 +20,8 @@ function App() {
     <div className="App">
       <Header />
       <Main track={track}/>
-      <Footer next={nextTrack} prev={prevTrack} trackData={track}/>
+    {/* <Footer next={nextTrack} prev={prevTrack} trackData={track}/> */}
+      <Footer transition={(event) => handleTransition(event.target.id)} trackData={track}/>
     </div>
   );
 }
