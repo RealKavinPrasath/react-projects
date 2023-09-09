@@ -11,7 +11,10 @@ function App() {
   
   function handleTransition(name) {
     setTrack(previousTrack => {
-      const id = name === "right" ? previousTrack.id + 1 : previousTrack.id ? previousTrack.id - 1 : previousTrack.id 
+      const increment = previousTrack.id + 1
+      const decrement = previousTrack.id - 1
+      const lengthCheck = increment >= trackData.length
+      const id = name === "right" ? (lengthCheck ? previousTrack.id : increment) : previousTrack.id ? decrement : previousTrack.id 
       return (trackData[id])
     })
   }
@@ -20,7 +23,6 @@ function App() {
     <div className="App">
       <Header />
       <Main track={track}/>
-    {/* <Footer next={nextTrack} prev={prevTrack} trackData={track}/> */}
       <Footer transition={(event) => handleTransition(event.target.id)} trackData={track}/>
     </div>
   );

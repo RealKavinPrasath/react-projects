@@ -4,7 +4,7 @@ export default function Footer(props) {
   return (
     <div className="Footer">
       <p>{props.trackData.driver}</p>
-      <p>{props.trackData.track}</p>
+      <p><strong>{props.trackData.track}</strong></p>
       <div className="navigation">
         <img src="../left-arrow.png" alt="" id="left" onClick={props.transition}/>
         <img src="../right-arrow.png" alt="" id="right" onClick={props.transition}/>
